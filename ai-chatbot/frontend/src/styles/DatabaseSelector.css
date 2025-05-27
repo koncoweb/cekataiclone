@@ -1,0 +1,154 @@
+.database-selector {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.database-toggle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 24px;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .toggle-slider {
+  background-color: #2196F3;
+}
+
+input:checked + .toggle-slider:before {
+  transform: translateX(26px);
+}
+
+.toggle-label {
+  font-weight: 600;
+  color: #333;
+}
+
+.database-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.search-mode-selector {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.search-mode-btn {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.search-mode-btn.active {
+  background-color: #2196F3;
+  color: white;
+  border-color: #2196F3;
+}
+
+.search-mode-btn:hover:not(.active) {
+  background-color: #e9ecef;
+}
+
+.select-group, .search-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.select-group label, .search-group label, .fields-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+}
+
+.select-group select, .search-group input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.fields-group {
+  margin-top: 5px;
+}
+
+.field-checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+.field-checkbox {
+  display: flex;
+  align-items: center;
+  background-color: #e9ecef;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.field-checkbox input {
+  margin-right: 5px;
+}
+
+.database-selector.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  color: #666;
+}
+
+.database-selector.error {
+  color: #dc3545;
+  padding: 10px;
+  border: 1px solid #dc3545;
+  border-radius: 4px;
+}
